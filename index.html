@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="tr" data-tema="koyu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-t="{ad}: ekibin masaüstündeki bırakma noktası">Lodos: ekibin masaüstündeki bırakma noktası</title>
+<meta name="description" content="Masaüstünde duran küçük bir nokta. Dosyayı ya da kısa notu bırak, ekip arkadaşına ulaşsın. Telefona, gruba, sekmeye gerek yok, ekranda da hiçbir şey sızmaz. Windows için, ücretsiz.">
+<meta name="surum" content="2026.10.05-1">
+<link rel="canonical" href="https://berksam.github.io/lodos-landing/">
+<meta name="theme-color" content="#17202a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://berksam.github.io/lodos-landing/">
+<meta property="og:site_name" content="Lodos" data-c="{ad}">
+<meta property="og:title" content="Lodos: ekibin masaüstündeki bırakma noktası" data-c="{ad}: ekibin masaüstündeki bırakma noktası">
+<meta property="og:description" content="Dosyayı ya da kısa notu noktaya bırak, ekip arkadaşına ulaşsın. WhatsApp telefonun için, Lodos masan için." data-c="Dosyayı ya da kısa notu noktaya bırak, ekip arkadaşına ulaşsın. WhatsApp telefonun için, {ad} masan için.">
+<meta property="og:image" content="https://berksam.github.io/lodos-landing/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gözleri olan beyaz bir nokta ve yanında: ekibin masaüstündeki bırakma noktası">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lodos: ekibin masaüstündeki bırakma noktası" data-c="{ad}: ekibin masaüstündeki bırakma noktası">
+<meta name="twitter:description" content="Dosyayı ya da kısa notu noktaya bırak, ekip arkadaşına ulaşsın. Windows için, ücretsiz.">
+<meta name="twitter:image" content="https://berksam.github.io/lodos-landing/assets/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<script>
+  // Tema boyamadan önce: kayıtlı seçim, yoksa koyu (nokta en iyi koyuda görünür)
+  try { var t = localStorage.getItem('tema'); if (t === 'acik' || t === 'koyu') document.documentElement.dataset.tema = t } catch (e) {}
+  try { var g = JSON.parse(localStorage.getItem('govde') || 'null'); if (g) { var s = document.documentElement.style; s.setProperty('--orb-body', g.b); s.setProperty('--orb-face', g.f); s.setProperty('--orb-wisp', g.w) } } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/urun.js" defer></script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="atla" href="#icerik">İçeriğe geç</a>
+
+<template id="orb-tpl">
+  <span class="orb-wrap" data-face="idle">
+    <svg class="wind" viewBox="0 0 30 44" fill="none" aria-hidden="true"><path d="M28 6H8"/><path d="M28 22H2"/><path d="M28 38H12"/></svg>
+    <span class="orb">
+      <span class="pulse" aria-hidden="true"></span>
+      <span class="face face-idle"><span class="eye l"></span><span class="eye r"></span></span>
+      <span class="face face-give"><span class="dot l"></span><span class="dot r"></span><span class="mouth"></span></span>
+      <span class="face face-smile"><svg viewBox="0 0 34 12" fill="none" aria-hidden="true"><path d="M2 9c2-5 7-5 9 0"/><path d="M23 9c2-5 7-5 9 0"/></svg></span>
+      <span class="face face-sleep"><span class="lid l"></span><span class="lid r"></span></span>
+      <svg class="wisp" viewBox="0 0 28 22" fill="none" aria-hidden="true"><path pathLength="1" d="M2 14c6 0 10-2 12-6s6-6 10-4c3 1.5 2 6-1.5 6-2.5 0-3-3-1-3.5"/></svg>
+      <span class="crown" aria-hidden="true"><svg viewBox="0 0 20 14"><path d="M2 12l2-9 6 5 6-5 2 9H2z"/></svg></span>
+      <span class="count" aria-hidden="true"></span>
+      <span class="badge badge-msg" aria-hidden="true"><svg viewBox="0 0 12 11" fill="none"><path d="M2 1.5h8a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1H5.5L3 9.5V8H2a1 1 0 0 1-1-1V2.5a1 1 0 0 1 1-1z"/></svg></span>
+      <span class="badge badge-file" aria-hidden="true"><svg viewBox="0 0 11 12" fill="none"><path d="M1.5 1.5h5l3 3v6h-8v-9z"/></svg></span>
+    </span>
+    <span class="zz" aria-hidden="true">z</span>
+  </span>
+</template>
+
+<header class="ust">
+  <a class="marka" href="#ust" aria-label="Başa dön" data-a="{ad}, başa dön">
+    <span class="mini-orb" aria-hidden="true"><i></i><i></i></span>
+    <span data-ad>Lodos</span>
+  </a>
+  <nav aria-label="Sayfa içi">
+    <a href="#nasil">Nasıl çalışır</a>
+    <a href="#dene">Dene</a>
+    <a href="#sss">Sorular</a>
+  </nav>
+  <button class="tema-dugme" type="button" aria-label="Açık temaya geç" title="Tema">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z"/></svg>
+  </button>
+  <a class="dugme dugme-kucuk" href="https://github.com/BerkSAM/lodos-landing/releases/latest" data-indir>İndir</a>
+</header>
+
+<main id="icerik">
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="ust" aria-labelledby="hero-baslik">
+    <svg class="ruzgar" viewBox="0 0 1440 760" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <path pathLength="1" d="M1440 170C1180 150 1010 250 820 228S520 120 300 160 60 250-40 236"/>
+      <path pathLength="1" d="M1440 330C1220 300 1060 380 880 360S600 280 420 318 120 390-40 372"/>
+      <path pathLength="1" d="M1440 470C1260 452 1120 520 930 506S640 430 470 462 160 540-40 526"/>
+      <path pathLength="1" d="M1440 610C1300 596 1150 650 990 640S720 580 560 604 260 676-40 662"/>
+    </svg>
+    <div class="hero-metin">
+      <h1 id="hero-baslik" class="hero-baslik">
+        <span class="satir"><span>Dosyayı bırak.</span></span>
+        <span class="satir"><span>Ekibe ulaşsın.</span></span>
+      </h1>
+      <p class="hero-alt">
+        WhatsApp'la iş yürüten küçük ekipler için masaüstünde duran sessiz bir nokta.
+        Dosyayı ya da kısa notu bırak, ekip arkadaşına ulaşsın. Telefona, gruba, sekmeye gerek yok,
+        ekranda da hiçbir şey sızmaz.
+      </p>
+      <div class="cta">
+        <a class="dugme dugme-ana" href="https://github.com/BerkSAM/lodos-landing/releases/latest" data-indir>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3.6 8.3 2.7v6.1H2zM9.2 2.6 18 1.3v7.5H9.2zM2 9.7h6.3v6.1L2 14.9zM9.2 9.7H18v7.5l-8.8-1.3z"/></svg>
+          Windows için indir
+        </a>
+        <a class="dugme dugme-ikinci" href="#nasil">Nasıl çalışır</a>
+      </div>
+      <p class="cta-not">Kapalı beta · Windows 10/11 · Ücretsiz</p>
+    </div>
+    <div class="hero-sahne">
+      <button class="orb-host hero-orb" type="button" data-orb data-boy="200" aria-label="Noktayı dürt">
+      </button>
+      <p class="hero-ipucu" aria-hidden="true">Dürt bakalım</p>
+    </div>
+  </section>
+
+  <!-- ============ Nasıl çalışır (kaydırmayla) ============ -->
+  <section class="nasil" id="nasil" aria-labelledby="nasil-baslik">
+    <div class="bolum-bas">
+      <h2 id="nasil-baslik">Üç hareket. Pencere yok.</h2>
+      <p>Nokta ekranının kenarında durur, her şeyin üstünde. Ona bir şey verdiğinde kime gideceğini sorar, gerisini o halleder.</p>
+    </div>
+    <div class="nasil-izgara">
+      <div class="nasil-sahne-kap">
+        <div class="sahne nasil-sahne" data-adim="0" aria-hidden="true">
+          <div class="masa">
+            <div class="masa-dosya">
+              <span class="dosya-ikon" style="--dz:#F2F3F7;--de:#E5533D"></span>
+              <span class="dosya-ad">teklif-ekim.pdf</span>
+            </div>
+            <div class="halka" data-halka>
+              <div class="halka-disk"></div>
+              <div class="halka-orta"></div>
+              <p class="halka-ipucu">Ortası: tüm ekip</p>
+            </div>
+            <div class="orb-host nasil-orb" data-orb data-boy="76"></div>
+            <div class="bildirim-hap"><b>Ayşe</b>'ye gitti. Alınana kadar bekler.</div>
+          </div>
+        </div>
+      </div>
+      <ol class="adimlar">
+        <li class="adim" data-adim="1">
+          <span class="adim-no" aria-hidden="true">1</span>
+          <h3>Dosyayı noktaya sürükle</h3>
+          <p>Masaüstünden, Gezgin'den, tarayıcıdan. Dosya yaklaşınca nokta gözlerini açar, ağzını açar: ver bakayım. Etrafında ekibin belirir.</p>
+        </li>
+        <li class="adim" data-adim="2">
+          <span class="adim-no" aria-hidden="true">2</span>
+          <h3>Birine ya da ortaya bırak</h3>
+          <p>Bir avatarın üstüne bırakırsan yalnız o kişiye gider. Ortaya bırakırsan tüm ekibe. Tek satırlık bir not da yazabilirsin.</p>
+        </li>
+        <li class="adim" data-adim="3">
+          <span class="adim-no" aria-hidden="true">3</span>
+          <h3>Fııt. Gitti.</h3>
+          <p>Nokta savurur, gülümser. Dosya karşı tarafa ulaşır ve o alana kadar bekler. Sen işine dönersin.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ Dene ============ -->
+  <section class="dene" id="dene" aria-labelledby="dene-baslik">
+    <div class="bolum-bas">
+      <h2 id="dene-baslik">Kendin dene</h2>
+      <p class="ipucu-fare">Bir dosyayı tut, noktaya sürükle. Bir avatarın üstünde bırak ya da ortaya.</p>
+      <p class="ipucu-dokun">Bir dosyaya dokun, sonra kime gideceğini seç.</p>
+    </div>
+    <div class="sahne dene-sahne" data-dene>
+      <div class="dene-dosyalar" role="group" aria-label="Masaüstündeki dosyalar">
+        <button class="dosya-kart" type="button" data-dosya="teklif-ekim.pdf" data-boyut="2,4 MB">
+          <span class="dosya-ikon" style="--dz:#F2F3F7;--de:#E5533D"></span>
+          <span class="dosya-yazi"><b>teklif-ekim.pdf</b><small>2,4 MB</small></span>
+        </button>
+        <button class="dosya-kart" type="button" data-dosya="logo-paketi.zip" data-boyut="18 MB">
+          <span class="dosya-ikon" style="--dz:#DCE6F2;--de:#6E8FB5"></span>
+          <span class="dosya-yazi"><b>logo-paketi.zip</b><small>18 MB</small></span>
+        </button>
+        <button class="dosya-kart" type="button" data-dosya="butce-q4.xlsx" data-boyut="310 KB">
+          <span class="dosya-ikon" style="--dz:#DDEFE3;--de:#2E8B57"></span>
+          <span class="dosya-yazi"><b>butce-q4.xlsx</b><small>310 KB</small></span>
+        </button>
+      </div>
+      <div class="dene-merkez">
+        <div class="halka" data-halka>
+          <div class="halka-disk"></div>
+          <button class="halka-orta" type="button" data-hedef="ekip" tabindex="-1" aria-label="Tüm ekibe gönder"></button>
+          <p class="halka-ipucu" aria-hidden="true">Ortası: tüm ekip</p>
+        </div>
+        <div class="orb-host dene-orb" data-orb data-boy="84"></div>
+      </div>
+      <p class="dene-durum" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ============ Göz kırpar ============ -->
+  <section class="kirpar" id="bildirim" aria-labelledby="kirpar-baslik">
+    <div class="kirpar-metin">
+      <h2 id="kirpar-baslik">Göz kırpar, sen bakınca söyler.</h2>
+      <p>Mesaj ya da dosya gelince nokta iki kez göz kırpar, köşesinde küçük bir simge belirir. Kimden, ne geldiği ekrana yazılmaz. Üstüne gelince ya da tıklayınca görürsün.</p>
+      <p>Toplantıda ekranını paylaşırken bile içerik sızmaz. Nokta orada, ama sırrı sende.</p>
+      <div class="kirpar-dugmeler" role="group" aria-label="Bir şey gönder">
+        <button class="hap-dugme" type="button" data-olay="mesaj">Mert mesaj atsın</button>
+        <button class="hap-dugme" type="button" data-olay="dosya">Zeynep dosya atsın</button>
+        <button class="hap-dugme" type="button" data-olay="yonetici">Yönetici yazsın</button>
+        <button class="hap-dugme" type="button" data-olay="uyku" aria-pressed="false">Rahatsız etme</button>
+      </div>
+      <p class="kirpar-not" data-kirpar-not>Yönetici yazınca nokta tersine döner: siyah gövde, beyaz göz, taç. Okuyana kadar öyle kalır.</p>
+    </div>
+    <div class="paylasim">
+      <div class="paylasim-cubuk">
+        <span class="kayit" aria-hidden="true"></span>
+        Ekranını paylaşıyorsun
+      </div>
+      <div class="paylasim-slayt" aria-hidden="true">
+        <span class="slayt-baslik">Ekim planı</span>
+        <span class="slayt-cizgi" style="--g:78%"></span>
+        <span class="slayt-cizgi" style="--g:62%"></span>
+        <span class="slayt-cizgi" style="--g:70%"></span>
+        <span class="slayt-grafik"><i style="--h:40%"></i><i style="--h:64%"></i><i style="--h:52%"></i><i style="--h:86%"></i><i style="--h:70%"></i></span>
+      </div>
+      <div class="paylasim-kose">
+        <div class="goz-at" role="status" aria-live="polite" hidden></div>
+        <button class="orb-host kirpar-orb" type="button" data-orb data-boy="64" aria-label="Noktaya bak: bekleyen bir şey yok"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Temalar ============ -->
+  <section class="tema" id="tema" aria-labelledby="tema-baslik">
+    <div class="orb-host tema-orb" data-orb data-boy="150"></div>
+    <div class="tema-metin">
+      <h2 id="tema-baslik">Rengini sen seç, yüzünü o ayarlar.</h2>
+      <p>Varsayılan siyah beyaz. Gövde rengini seçersen göz rengi okunur kalsın diye kendiliğinden siyaha ya da beyaza döner. Seçtiğin renk bu sayfadaki bütün noktalara geçer.</p>
+      <fieldset class="renkler">
+        <legend class="gizli">Gövde rengi</legend>
+      </fieldset>
+    </div>
+  </section>
+
+  <!-- ============ WhatsApp ============ -->
+  <section class="ayrim" aria-labelledby="ayrim-baslik">
+    <h2 id="ayrim-baslik" class="ayrim-baslik" data-t="WhatsApp telefonun için, {ad} masan için.">WhatsApp telefonun için, Lodos masan için.</h2>
+    <div class="ayrim-iki">
+      <div>
+        <h3>Telefonda kalsın</h3>
+        <p>Aile grubu, arkadaşlar, akşam planı. Grubu kapatmana gerek yok, kimse uygulama değiştirmek zorunda değil.</p>
+      </div>
+      <div>
+        <h3>Masaya gelsin</h3>
+        <p>Teklif dosyası, logo paketi, "toplantı 10'da" notu. Bilgisayardaki şey bilgisayarda kalır, telefona inip geri çıkmaz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Ayrıntılar ============ -->
+  <section class="ozler" aria-labelledby="ozler-baslik">
+    <h2 id="ozler-baslik" class="gizli">Ayrıntılar</h2>
+    <article class="oz oz-gecici">
+      <h3>Alınana kadar bekler, sonra gider.</h3>
+      <p>Gönderdiğin dosya karşı taraf alana kadar durur, sonra kendiliğinden silinir. Kalması gereken bir şeyse <b>Sakla</b> dersin, ekibin ortak klasörüne geçer.</p>
+      <div class="sakla-satir">
+        <span class="dosya-ikon" style="--dz:#E9E3F7;--de:#7A5CC4" aria-hidden="true"></span>
+        <span class="dosya-yazi"><b>tanitim-kurgu.mp4</b><small data-sakla-durum>Ayşe aldı · birazdan silinecek</small></span>
+        <button class="sakla-dugme" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 17v5"/><path d="M9 3h6l-1 6 4 4H6l4-4-1-6z"/></svg>
+          <span>Sakla</span>
+        </button>
+      </div>
+    </article>
+    <article class="oz oz-kod">
+      <h3>Hesap yok, şifre yok.</h3>
+      <p>Ekibi kuran bir davet kodu paylaşır. Katılan adını yazar, rengini seçer, o kadar.</p>
+      <p class="davet-kodu" aria-label="Örnek davet kodu"><span data-onek>LDS</span>-7K2M-Q9XA</p>
+    </article>
+    <article class="oz oz-sunucu">
+      <h3>İstersen kendi sunucunda.</h3>
+      <p>Şirket isterse aynı sunucuyu kendi makinesinde Docker ile çalıştırır. Veri şirkette kalır, davet kodu sunucunun adresini kendisi taşır, kimse adres yazmaz.</p>
+    </article>
+    <article class="oz oz-hafif">
+      <h3>Küçük.</h3>
+      <p>Yaklaşık 25 MB. Arka planda bekler, işlemciyi meşgul etmez, nokta boştayken ekranı yeniden çizdirmez.</p>
+    </article>
+    <article class="oz oz-bedava">
+      <h3>Ücretsiz.</h3>
+      <p>Ekibin tamamı için. Kart, deneme süresi, kişi başı fiyat yok.</p>
+    </article>
+  </section>
+
+  <!-- ============ SSS ============ -->
+  <section class="sss" id="sss" aria-labelledby="sss-baslik">
+    <h2 id="sss-baslik">Sorular</h2>
+    <div class="sss-liste">
+      <details>
+        <summary>Mac'te ya da telefonda var mı?</summary>
+        <p>Şimdilik yok. <span data-ad>Lodos</span> Windows 10 ve 11 için. Masa başında çalışan ekipler için düşünüldü, telefon tarafı WhatsApp'ta kalabilir.</p>
+      </details>
+      <details>
+        <summary>Dosya boyutu sınırı var mı?</summary>
+        <p>Var. Sınırı sunucu belirler ve uygulama sana gösterir. Kendi sunucunu çalıştırıyorsan sınırı sen ayarlarsın.</p>
+      </details>
+      <details>
+        <summary>Dosyalarım ve mesajlarım nerede duruyor?</summary>
+        <p>Varsayılan olarak bizim sunucumuzda, yurt dışında. Dosyalar alındıktan sonra silinir, yalnız "Sakla" dediklerin ortak klasörde kalır. Verinin şirketten çıkmasını istemiyorsan sunucuyu kendin çalıştır.</p>
+      </details>
+      <details>
+        <summary>Ekranımı paylaşırken mesajlar görünür mü?</summary>
+        <p>Hayır. Nokta görünür, içerik görünmez. Kimden ne geldiğini yalnız sen üstüne gelince ya da tıklayınca görürsün.</p>
+      </details>
+      <details>
+        <summary>WhatsApp grubunu kapatmamız mı gerekiyor?</summary>
+        <p>Hayır. <span data-ad>Lodos</span> onun yerine geçmez, yanında durur. İş dosyası ve kısa iş notu masada kalsın diye var.</p>
+      </details>
+      <details>
+        <summary>Kaç kişilik ekip için?</summary>
+        <p>5 ile 15 kişi arası ekipler düşünülerek yapıldı. Herkes noktanın etrafındaki halkada görünür.</p>
+      </details>
+      <details>
+        <summary>Nasıl katılırım?</summary>
+        <p>Şu an kapalı beta. Ekibini kuran kişi sana bir davet kodu verir, uygulamayı açıp kodu yazarsın.</p>
+      </details>
+      <details>
+        <summary>Windows kurulumda uyarı verirse?</summary>
+        <p>Kapalı betada kurulum paketi henüz imzalı değil, bu yüzden Windows ilk açılışta "tanınmayan uygulama" uyarısı gösterebilir. "Ek bilgi" ve "Yine de çalıştır" ile devam edebilirsin.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="alt">
+  <div class="alt-ic">
+    <p class="alt-buyuk"><span data-ad>Lodos</span> kapalı betada. Ekibinle denemek istersen kur, davet kodunu paylaş.</p>
+    <a class="dugme dugme-ana" href="https://github.com/BerkSAM/lodos-landing/releases/latest" data-indir>Windows için indir</a>
+    <p class="alt-kucuk">
+      <span><span data-yapan>Berk</span> yapıyor.</span> <a href="https://github.com/BerkSAM" data-github>GitHub'da @BerkSAM</a>
+      <span class="surum">Sürüm <span data-surum>2026.10.05-1</span></span>
+    </p>
+  </div>
+</footer>
+
+<button class="yoldas" type="button" aria-label="Başa dön">
+  <span class="orb-host yoldas-orb" data-orb data-boy="52"></span>
+</button>
+
+<noscript><style>.hero-baslik .satir > span{transform:none!important;opacity:1!important}.orb-host{display:none}</style></noscript>
+</body>
+</html>
