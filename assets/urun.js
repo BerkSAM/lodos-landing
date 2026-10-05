@@ -8,11 +8,11 @@ window.URUN = {
   // Davet kodlarının öneki (uygulamada LDS-XXXX-XXXX)
   onek: 'LDS',
   kategori: 'ekibin masaüstündeki bırakma noktası',
-  slogan: 'WhatsApp telefonun için, {ad} masan için.',
+  slogan: 'Masandaki ekip.',
   indir: 'https://github.com/BerkSAM/lodos-landing/releases/latest',
   yapan: 'Berk',
   github: 'https://github.com/BerkSAM',
   site: 'https://berksam.github.io/lodos-landing/',
   // Yayın damgası: her yayında artır (canlı sürümün doğrulanması için)
-  surum: '2026.10.05-1',
+  surum: '2026.10.05-2',
 }
