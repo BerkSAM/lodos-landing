@@ -1,6 +1,6 @@
 # Lodos tanıtım sayfası
 
-Lodos'un tanıtım sayfası: https://berksam.github.io/lodos-landing/
+### 👉 [Siteyi aç: berksam.github.io/lodos-landing](https://berksam.github.io/lodos-landing/)
 
 Saf HTML/CSS/JS, derleme adımı yok. GitHub Pages `main` dalının kökünden yayınlar.
 
